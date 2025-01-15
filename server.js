@@ -11,6 +11,10 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get("/",(req,res)=>{
+  res.send("hello")
+})
+
 app.use(
   "/abdm_acces_token_proxy",
   createProxyMiddleware({
